@@ -1,0 +1,175 @@
+/* =============
+ table of contents
+===============
+1. header 
+2. Model
+3. icons&&button
+4. responsive 
+*/
+/* ===============
+   1.  Header  style
+================ */
+header.flex {
+  justify-content: space-between;
+  padding: 0px 3rem;
+  margin-top: 1.5rem;
+}
+
+header.flex nav {
+  border-radius: 55px;
+  background-color: var(--bgheader);
+  box-shadow: 0px 2px 7px rgb(56 49 49);
+}
+header nav ul {
+  gap: 19px;
+  padding: 12px;
+}
+header ul li a {
+  color: var(--title);
+
+  letter-spacing: 2px;
+  text-transform: capitalize;
+  font-size: 0.79rem;
+  font-weight: bold;
+  opacity: 0.9;
+  transition: 0.3s;
+}
+header ul li a:hover {
+  color: var(--blue);
+  opacity: 1;
+  font-size: 0.87rem;
+}
+
+/* ===============
+   1. Model Style
+================ */
+header div.fixed {
+  position: fixed;
+  inset: 0;
+  background-color: rgb(55 55 57 / 90%);
+  z-index: 1000;
+  backdrop-filter: blur(8px);
+}
+header div ul.model {
+  padding: 0.8rem;
+  box-shadow: -1px 2px 1px rgb(53 53 62);
+  margin: 4rem 1rem;
+  border-radius: 2rem;
+  background-color: var(--secondary);
+  animation: model 0.5s 1;
+  position: relative;
+}
+@keyframes model {
+  0% {
+    scale: 0;
+  }
+  70% {
+    scale: 1.2;
+  }
+  100% {
+    scale: 1;
+  }
+}
+
+header div ul li {
+  padding: 0.9rem 0;
+  border-bottom: 2px solid var(--border);
+}
+header div ul li:last-child {
+  border: none;
+}
+/* ===============
+   1. icon & button Style
+================ */
+header button.icon-menu,
+header button.mode {
+  font-size: 1.3rem;
+  border: 2px solid var(--border);
+  width: 2.4rem;
+  height: 2.4rem;
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  display: flex;
+  background-color: var(--bgheader);
+  color: var(--subtitle);
+  transition: 0.4s;
+}
+header button.icon-menu {
+  display: none;
+}
+header div ul li:first-child {
+  padding-bottom: 0rem;
+  text-align: right;
+  border-bottom: none;
+  padding-right: 1rem;
+}
+header div ul li:first-child .icon-cross {
+  font-size: 1.2rem;
+  transition: 0.3s;
+}
+header div ul li:first-child .icon-cross:hover {
+  color: var(--blue);
+  font-size: 1.4rem;
+  transform: rotate(180deg);
+}
+
+header .icon-close {
+  font-size: 1.5rem;
+  color: var(--subtitle);
+  transition: 0.3s;
+}
+
+
+
+/*light mode*/
+.light header.flex .icon-menu,
+.light header button.mode {
+  background-color: var(--bgHeader);
+  height: 2.4rem;
+  width: 2.4rem;
+  border-radius: 50%;
+  justify-content: center;
+  text-align: center;
+  color: var(--subtitle);
+  border: 1px solid rgba(244, 165, 96, 0.249);
+  transition: 0.2s;
+  box-shadow: 1px 1px 40px rgba(35, 35, 36, 0.165);
+}
+.light header nav li a {
+  color: var(--secondary);
+}
+.light header nav li a:hover {
+  color: var(--blue);
+}
+
+header .icon-sun {
+  color: rgb(255, 165, 0);
+}
+
+.light header.flex .icon-menu:hover,
+.dark header.flex .icon-menu:hover,
+header button.mode:hover {
+  color: var(--title);
+  border: 1px solid rgb(244, 165, 96);
+}
+
+/* ===============================
+   1. Media  Style responsive
+================ ================*/
+
+@media (max-width: 750px) {
+  header.flex nav {
+    display: none;
+  }
+  header button.icon-menu {
+    display: block;
+  }
+}
+@media (max-width: 934px) {
+  header.flex {
+    justify-content: space-between;
+    padding: 0px 1rem;
+  }
+}

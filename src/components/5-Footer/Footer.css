@@ -1,0 +1,36 @@
+footer.flex {
+  justify-content: space-between;
+  padding-bottom: 2rem;
+}
+footer.flex ul.flex {
+  gap: 1rem;
+}
+footer.flex ul.flex li a {
+  color: var(--subtitle);
+  font-size: 0.9rem;
+  transition: 0.5s;
+  text-transform: capitalize;
+}
+footer.flex ul.flex li a:hover {
+  font-size: 1rem;
+  color: var(--blue);
+  font-weight: bold;
+}
+footer.flex p {
+  color: rgba(122, 122, 133);
+  font-size: 0.8rem;
+}
+@media (max-width: 800px) {
+  footer {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  footer.flex ul.flex li a {
+    font-size: 0.8rem;
+  }
+}
+@media (max-width: 300px) {
+  footer.flex ul.flex {
+    flex-direction: column;
+  }
+}

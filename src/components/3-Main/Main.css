@@ -1,0 +1,172 @@
+/* ====================================
+        table of contents
+=======================================
+1. left-Section ==> button
+2. right-Section ==> Card 
+3. responsive 
+*/
+main.flex {
+  gap: 2rem;
+  align-items: start;
+}
+/* =======================================
+        1.left-Section ==> button
+===========================================*/
+main section.flex.left-section {
+  flex-direction: column;
+  gap: 10px;
+}
+main section.left-section button {
+  text-align: center;
+  border-radius: 5px;
+  width: 7rem;
+  padding: 0.6rem;
+  font-size: 0.9rem;
+  opacity: 0.5;
+  background-color: rgba(36, 37, 46, 1);
+  transition: 0.3s;
+  letter-spacing: 0.7px;
+  text-transform: capitalize;
+  color: azure;
+}
+main section.left-section button:hover {
+  opacity: 1;
+}
+main section.left-section button.active {
+  border: 2px solid var(--blue);
+  font-weight: bold;
+  opacity: 1;
+}
+.light main section.left-section.flex button.active {
+  border: 1px solid #000;
+}
+
+/* =======================================
+        1.right-Section ==> Card
+===========================================*/
+main section.right-section.flex {
+  flex-wrap: wrap;
+  justify-content: center;
+  row-gap: 2rem;
+  column-gap: 0.4rem;
+}
+
+main .right-section article {
+  box-shadow: -1px 1px 1px rgba(0, 0, 0, 0.16), 1px 1px 1px rgba(0, 0, 0, 0.15);
+  border: 1px solid rgba(93, 188, 252, 0.3);
+  border-radius: 5px;
+  transition: 0.3s;
+  background-image: linear-gradient(
+    rgba(255, 255, 255, 0.05),
+    rgba(255, 255, 255, 0.05)
+  );
+}
+main .right-section article:hover {
+  border: 2px solid var(--blue);
+  transform: rotate(1deg);
+  scale: 1.01;
+}
+.light main .right-section article {
+  transition: 0.3s;
+}
+.light main .right-section article:hover {
+  border: 2px solid rgba(130, 127, 127, 0.584);
+}
+
+.light main .right-section article {
+  box-shadow: -1px 2px 1px rgba(20, 20, 20, 0.16),
+    1px 1px 1px rgba(0, 0, 0, 0.15);
+  background-image: linear-gradient(
+    rgba(255, 255, 255, 0.181),
+    rgba(255, 255, 255, 0.203)
+  );
+  transition: 0.3s;
+}
+main section.right-section.flex {
+  flex-wrap: wrap;
+  row-gap: 2rem;
+  column-gap: 0.6rem;
+}
+
+main section.right-section img,
+main section.right-section .card {
+  width: 253px;
+  cursor: pointer;
+}
+main section.right-section img {
+  border-radius: 5px;
+}
+
+main section.right-section .card {
+  margin-top: -5px;
+  padding: 0.4rem 0.5rem;
+  background-image: ;
+}
+main section.right-section .card h2.title {
+  font-size: 1.01rem;
+  text-transform: capitalize;
+  letter-spacing: 0.7px;
+
+  color: var(--title);
+}
+main section.right-section .card p.subtitle {
+  color: var(--subtitle);
+  font-size: 0.6rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.4rem;
+  line-height: 17px;
+}
+/* =======================================
+        1.right-Section ==>icons
+===========================================*/
+main section.right-section .card .links.flex {
+  justify-content: space-between;
+
+  padding-bottom: 0.3rem;
+}
+main section.right-section .card .links .right-icon {
+  font-size: 1.1rem;
+  color: var(--subtitle);
+  gap: 0.9rem;
+}
+main section.right-section .card .links .right-icon a {
+  color: var(--subtitle);
+}
+main section.right-section .card .right-icon .icon-github,
+main section.right-section .card .right-icon .icon-link {
+  transition: 0.3s;
+}
+main section.right-section .card .right-icon .icon-github:hover,
+main section.right-section .card .right-icon .icon-link:hover {
+  color: var(--icon-hover);
+  font-size: 1.2rem;
+}
+main section.right-section .card .left-icon.flex {
+  gap: 0.1rem;
+  color: var(--blue);
+  font-size: 0.7rem;
+}
+main section.right-section .card .left-icon.flex .icon-arrow-right2 {
+  align-self: end;
+}
+/* =================================
+   1. Media  Style responsive
+==================================== */
+@media (max-width: 1000px) {
+  main.flex {
+    flex-direction: column;
+    gap: 3rem;
+    align-items: center;
+  }
+  main section.flex.left-section {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+  main section.left-section button {
+    width: 7rem;
+    padding: 0.9rem;
+    font-size: 0.8rem;
+  }
+}

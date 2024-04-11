@@ -1,0 +1,49 @@
+/* =============
+ table of contents
+===============
+1. left-Section ==>Hero
+2. animation
+*/
+/* ===============
+   1. LeftHero
+================ */
+section.hero .left-section {
+  flex-grow: 1;
+  margin-top: 4rem;
+}
+
+section.hero .left-section .photo img {
+  width: 5rem;
+  border: 2px solid rgb(0 150 136 / 79%);
+  padding: 0.1rem;
+  border-radius: 50%;
+  box-shadow: rgb(0 150 136 / 79%) 3px 2px 2px 11px inset;
+}
+section.hero .left-section .title {
+  font-size: 3rem;
+  color: var(--title);
+  margin-top: 1rem;
+  font-weight: bold;
+  text-transform: capitalize;
+  letter-spacing: 0.2rem;
+}
+section.hero .left-section .sub-title {
+  font-size: 0.9rem;
+  color: var(--subtitle);
+  margin-top: 20px;
+  line-height: 26px;
+}
+section.hero .left-section .icons {
+  gap: 0.9rem;
+  margin-top: 2rem;
+}
+section.hero .left-section .icons .icon {
+  font-size: 1.4rem;
+  color: var(--subtitle);
+  cursor: pointer;
+  transition: 0.3s;
+}
+section.hero .left-section .icons .icon:hover {
+  font-size: 1.5rem;
+  color: var(--icon-hover);
+}
