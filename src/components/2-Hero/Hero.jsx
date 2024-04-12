@@ -1,8 +1,8 @@
 import "./Hero.css";
 import { useEffect } from "react";
 import Lottie from "lottie-react";
-import ani5 from "../../../public/animation/ani5.json";
-import ani3 from "../../../public/animation/ani3.json";
+import ani5 from"../../animation/ani5.json" ;
+import ani3 from "../../animation/ani3.json";
 
 import { motion } from "framer-motion";
 export default function Hero() {
