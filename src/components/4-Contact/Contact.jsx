@@ -1,8 +1,8 @@
 import "./Contact.css";
 import { useForm, ValidationError } from "@formspree/react";
 import Lottie from "lottie-react";
-import ani4 from "../../../public/animation/ani4.json";
-import ani1 from "../../../public/animation/ani1.json";
+import ani4 from "../../animation/ani4.json";
+import ani1 from "../../animation/ani1.json";
 
 
 export default function Contact() {
